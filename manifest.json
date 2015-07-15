@@ -1,0 +1,35 @@
+{
+  "name": "Health Check",
+  "description": "Monitoring any health check URL that was configured. You can use a JSON or text URL return.",
+  "background": {
+    "persistent": false,
+    "scripts": [ "js/background.js" ]
+  },
+  "browser_action": {
+    "default_icon": "icons/health-check-19-blue.png",
+    "default_popup": "popup.html",
+    "default_title": "Health Check"
+  },
+  "content_scripts":[
+    {
+      "js": [ "js/actions.js", "js/d3.v3.min.js", "js/stopExecutionOnTimeout.js" ],
+      "matches": [ "*://*/*", "file://*/*" ]
+    }
+  ],
+  "icons": {
+    "16":  "icons/health-check-19-blue.png",
+    "48":  "icons/health-check-48-blue.png",
+    "64":  "icons/health-check-64-blue.png",
+    "128": "icons/health-check-128-blue.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "short_name": "Health Check",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0",
+  "web_accessible_resources": [ "icons/health-check-128-blue.png" ],
+  "manifest_version": 2
+}
