@@ -3,3 +3,27 @@
 	height:400px;
 	font-family:Verdana
 }
+
+.node {
+    stroke-width: 1.5px;
+}
+.link {
+    stroke: #333;
+    stroke-opacity: .6;
+}
+
+pre {
+	padding: 5px 5px;
+	font-family: monospace;
+	font-size: 12px
+}
+.json-key {
+   color: black;
+		font-weight: bold;
+}
+.json-value {
+   color: firebrick;
+   }
+.json-string {
+   color: olive;
+   }
